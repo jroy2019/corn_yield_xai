@@ -1,10 +1,12 @@
 """
 ======================================================================================================================
-Script: Hybrid Holdout Cross-Validation (10-Fold) for Random Forest Model
+10-Fold Cross-Validation for Random Forest 
 
-This script implements a 10-fold cross-validation strategy in which the data is partitioned at the hybrid level.
-All individuals belonging to a specific hybrid are grouped into the same fold and do not appear in any other fold. 
-This facilitates robust evaluation of model generalization on unseen hybrids.
+Description:
+------------
+This trains a RandomForest Regressor for corn yield prediction and implements a 10-fold cross-validation strategy. 
+All samples which are the same Hybrid are grouped into the same fold and do not appear in any other fold. This facilitates 
+robust evaluation of model generalization on unseen hybrids. 
 
 Input:
 This script can be run on 4 progressively enriched datasets:
@@ -21,11 +23,9 @@ Output:
 
 Key Features:
 -------------
-- Hybrid-level 10-fold GroupKFold 
-- Random Forest model (re-trained from scratch per fold)
+- 10-fold cross-validation with hybrid-based grouping
 - Regression metrics (RMSE, MAE, MSE, R²) calculated per fold
 - Regression metrics evaluated per hybrid group within each fold
-- Results saved as CSVs 
 
 Placeholder Explanation:
 ------------------------
@@ -35,28 +35,21 @@ Placeholder Explanation:
 """
 
 # -------------------------------------------- Import Libraries and Data ----------------------------------------------
-print('starting job')
-print('importing libraries')
 
 import pandas as pd
 import numpy as np
 import math
-
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GroupKFold
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-
 import sys
 sys.stdout.reconfigure(line_buffering=True)
-
-print('libraries imported successfully')
 
 # ----------------------------------------------- CONFIGURATION ------------------------------------------------------
 
 dataset_file = 'final_boss_snp_with_hybrids_values.csv'   # <--- CHANGE THIS
 dataset_name = 'snp_only'                                 # <--- CHANGE THIS
 
-print(f'importing {dataset_name} dataset')
 g2f_dataset = pd.read_csv(dataset_file)
 
 # --------------------------------------------------- Data Management ------------------------------------------------
