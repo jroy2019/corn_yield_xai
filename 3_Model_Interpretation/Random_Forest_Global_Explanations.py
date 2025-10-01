@@ -1,15 +1,11 @@
 """
-===============================================================================
+======================================================================================================================
 Random Forest Global Feature Importances
 
 Description:
-------------
-The script interprets a RandomForest Regressor for corn yield prediction by 
-computing global feature importances using the built-in feature importance 
-attribute of the Random Forest model, where global importance is measured
-as the decrease in node impurity averaged over all trees of the ensemble. 
-Global feature importances are computed for each fold of a 10-fold cross-
-validation strategy.
+-------------
+A Random Forest trained from scratch and global feature importances computed per fold 
+using feature_importances_ attribute in scikit-learn RandomForestRegressor.
 
 Input:
 This script can be run on 4 progressively enriched datasets:
@@ -24,15 +20,12 @@ Output:
 - Pickle file with trained Random Forest models.
 - CSV file containing built-in Random Forest global feature importances per fold
 
-Key Features:
--------------
-- Random Forest trained from scratch and global feature importances computed per fold
 
 Placeholder Explanation:
 ------------------------
 - dataset_file: absolute path to your CSV dataset file
 - dataset_name: short identifier (e.g., "snp_only", "snp_weather", etc.)
-==============================================================================
+======================================================================================================================
 """
 
 # ---------------------------------------------- Import Libraries ----------------------------------------------------
@@ -54,7 +47,7 @@ dataset_name = 'snp_only'                                 # <--- CHANGE THIS
 
 g2f_dataset = pd.read_csv(dataset_file)
 
-# ------------------------------------------------ Data Import + Management ----------------------------
+# ------------------------------------------------ Data Import + Management ----------------------------------------
 
 g2f_dataset = pd.read_csv(dataset_file)
 

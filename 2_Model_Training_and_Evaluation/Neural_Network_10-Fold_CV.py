@@ -4,9 +4,10 @@
 
 Description:
 ------------
-This trains a Fully Connected Neural Network for corn yield prediction and implements a 10-fold cross-validation strategy. 
-All samples which are the same Hybrid are grouped into the same fold and do not appear in any other fold. This facilitates 
-robust evaluation of model generalization on unseen hybrids. 
+This trains a Fully Connected Neural Network for corn yield prediction and 
+implements a 10-fold cross-validation strategy. All samples which are the
+same Hybrid are grouped into the same fold and do not appear in any other
+fold. This facilitates robust evaluation of model generalization on unseen hybrids.
 
 Input: 
 This script can be run on 4 progressively enriched datasets:
