@@ -1,10 +1,10 @@
 """
 ======================================================================================================================
-Script: SHAP Local and Global Explanations of Neural Network
+Script: SHAP Local and Global Explanations of Neural Network of holdout predictions
 
 Description:
 ------------
-Use SHAP DeepExplainer to interpret indivual predictions from a pre-trained
+Use SHAP DeepExplainer to interpret indivual yield predictions from a pre-trained
 Neural Network and compute mean absolute SHAP value per feature across all 
 samples for global feature importance.
 
@@ -22,7 +22,7 @@ Output:
 - Pickle (per fold) file containing: 
     * Feature names
     * Feature values 
-    * Sample index
+    * Original Sample index
     * SHAP values
     * Expected value
 
