@@ -57,7 +57,7 @@ done
 cat chrom*_filtered_SNPs.recode.vcf >> combined_filtered_chromosomes.recode.vcf
 ```
 
-#### **Step 4: Remove excess headers in combined vcf file. **
+#### **Step 4: Remove excess headers in combined vcf file**
 ```bash
 head -n9 combined_filtered_chromosomes.recode.vcf > v2_combined_filtered_chromosomes.recode.vcf
 grep -v "#" combined_filtered_chromosomes.recode.vcf >> v2_combined_filtered_chromosomes.recode.vcf
