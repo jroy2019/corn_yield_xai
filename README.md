@@ -1,9 +1,9 @@
-# corn_yield_xai
+# maize_yield_xai
 
 ## Overview
-`corn_yield_xai` predicts maize yield using machine learning and uncovers drivers of yield prediction using Shapley Additve exPlanations (SHAP)
+`maize_yield_xai` supports the analysis presented in [Paper Title / DOI].  
 
-Repo includes Data pre-processing, model training (Random Forest and Neural Network), optiisation and evaluation, as-well XAI visualisations (local and global explanations).
+Repo includes data processing, model (Random Forest and Neural Network) training, optiisation and evaluation, as-well generating Explainable AI Explanations (XAI)
 
 ---
 
