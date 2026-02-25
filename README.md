@@ -44,7 +44,7 @@ bash -c "source <path_to_python_env>/bin/activate && python3 scripts/run_experim
 ---
 
 ## Data
-- - Genome 2 Fields Dataset: [Link](https://drive.google.com/drive/folders/1IQ3zoxBuuSP9KBYbH5dxicEjovyDtpsu)
+- Genome 2 Fields Dataset: [Link](https://drive.google.com/drive/folders/1IQ3zoxBuuSP9KBYbH5dxicEjovyDtpsu)
 - Preprocessing included in scripts
 
 ---
