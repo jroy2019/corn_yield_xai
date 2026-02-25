@@ -1,21 +1,22 @@
 # corn_yield_xai
 
 ## Overview
-`corn_yield_xai` predicts maize (corn) yield using machine learning and uncovers drivers of yield prediction using interpretable AI (XAI).  
-Includes Data pre-processing, model training (Random Forest and Neural Network), optiisation and evaluation, as-well XAI visualisations (local and global explanations).
+`corn_yield_xai` predicts maize yield using machine learning and uncovers drivers of yield prediction using Shapley Additve exPlanations (SHAP)
+
+Repo includes Data pre-processing, model training (Random Forest and Neural Network), optiisation and evaluation, as-well XAI visualisations (local and global explanations).
 
 ---
 
 ## Singularity and Usage
 
 ### Singularity Container
-/software/setonix/2024.05/containers/sif/quay.io/pawsey/pytorch/2.2.0-rocm5.7.3/quay.io-pawsey-pytorch-2.2.0-rocm5.7.3.sif
+[add info] idk.
 
 ### Usage 
 
 ### Interactive
 1. Connect to a compute node and allocate resources:
-salloc --account=<account> --cpus-per-task=x --mem=25GB --nodes=1 --partition=y --time=5:00:00
+salloc --account=<account> --cpus-per-task=x --mem=y --nodes=1 --partition=z --time=5:00:00
 
 2. Load modules and activate Python environment:
 module load pytorch/2.2.0-rocm5.7.3
@@ -37,7 +38,7 @@ source <path_to_python_env>/bin/activate
 
 2. Submit experiment script:
 srun -N $SLURM_JOB_NUM_NODES -n $SLURM_NTASKS -c $SLURM_CPUS_PER_TASK \
-bash -c "source <path_to_python_env>/bin/activate && python3 scripts/run_experiment.py"
+bash -c "source <path_to_python_env>/bin/activate && python3 path/to/script/script.py"
 
 > Notes: $SLURM_JOB_NUM_NODES, $SLURM_NTASKS, and $SLURM_CPUS_PER_TASK are set by SLURM.
 
