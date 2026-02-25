@@ -2,7 +2,7 @@
 
 ## Overview
 `corn_yield_xai` predicts maize (corn) yield using machine learning and uncovers drivers of yield prediction using interpretable AI (XAI).  
-Includes preprocessing, model training, evaluation, and XAI visualizations.
+Includes Data pre-processing, model training (Random Forest and Neural Network), optiisation and evaluation, as-well XAI visualisations (local and global explanations).
 
 ---
 
@@ -15,7 +15,7 @@ Includes preprocessing, model training, evaluation, and XAI visualizations.
 
 ### Interactive
 1. Connect to a compute node and allocate resources:
-salloc --account=<account> --cpus-per-task=36 --mem=25GB --nodes=1 --partition=highmem --time=5:00:00
+salloc --account=<account> --cpus-per-task=x --mem=25GB --nodes=1 --partition=y --time=5:00:00
 
 2. Load modules and activate Python environment:
 module load pytorch/2.2.0-rocm5.7.3
@@ -45,7 +45,6 @@ bash -c "source <path_to_python_env>/bin/activate && python3 scripts/run_experim
 
 ## Data
 - Genome 2 Fields Dataset: [Link](https://drive.google.com/drive/folders/1IQ3zoxBuuSP9KBYbH5dxicEjovyDtpsu)
-- Preprocessing included in scripts
 
 ---
 
